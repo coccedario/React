@@ -1,21 +1,57 @@
 import { Link } from "react-router-dom";
 
+const styles={
+
+    nav:{
+    
+        height: "30px",
+        color: "#008b8b",
+        backgroundColor: "black",
+        padding: "0",
+    
+    },
+    
+       
+    ul:{
+        listStyle: "none",
+        textDecoration: "none",
+        display: "flex",
+        paddingTop: "5px",
+        paddingLeft: "40px",
+    },
+    
+    li:{
+    
+    
+        flexGrow: "1",
+    },
+    
+    a:{
+        color: "#008b8b",
+        textDecoration: "none",
+        fontStyle: "italic",
+        fontWeight: "bold",
+    }
+    
+}
+
 const Nav = (props) => {
 
 
 
     return (
-        <nav>
+        <nav style={styles.nav}>
             <div>
 
-                <ul>
-                    <li><Link to= "/">Home</Link></li>
-                    <li><Link to= "/Cuerdas">Cuerdas</Link></li>
-                    <li><Link to= "/Percusion">Percusion</Link></li>
-                    <li><Link to= "/Teclados">Teclados</Link></li>
-                    <li><Link to= "/Vientos">Vientos</Link></li>
-                    <li><Link to= "/Nosotros">Nosotros</Link></li>
-                    <li><Link to= "/Contacto">Contacto</Link></li>
+                <ul style={styles.ul} >
+
+                    <li style={styles.li}><Link  style={styles.a} to= "/">Home</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Cuerdas">Cuerdas</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Percusion">Percusion</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Teclados">Teclados</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Vientos">Vientos</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Nosotros">Nosotros</Link></li>
+                    <li style={styles.li}><Link style={styles.a} to= "/Contacto">Contacto</Link></li>
 
 
 

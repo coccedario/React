@@ -1,6 +1,24 @@
 const Home = (props) => {
+
+    const styles={
+
+        inicio: {
+            
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            height: "479px",
+            backgroundImage: "url(../img/microfonos.jpg)",
+            padding: "50px",
+        
+        
+        
+        }
+    }
+
     return (
-<h1>Pagina de Inicio</h1>
+<div style={styles.inicio}>
+
+</div>
 
     )
 }
