@@ -5,8 +5,8 @@ const styles={
         borderTop: "1px solid #008b8b",
          background: "rgb(1, 0, 8)",
         // background: rgb(1, 0, 8);
-        // background: -moz-linear-gradient(180deg, rgba(1, 0, 8, 1) 0%, rgba(0, 139, 139, 1) 66%);
-        // background: -webkit-linear-gradient(180deg, rgba(1, 0, 8, 1) 0%, rgba(0, 139, 139, 1) 66%);
+         //background: "-moz-linear-gradient(180deg, rgba(1, 0, 8, 1) 0%, rgba(0, 139, 139, 1) 66%)",
+        // background: "-webkit-linear-gradient(180deg, rgba(1, 0, 8, 1) 0%, rgba(0, 139, 139, 1) 66%)",
         background: "linear-gradient(180deg, rgba(1, 0, 8, 1) 0%, rgba(0, 139, 139, 1) 66%)",
         filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr'#010008', endColorstr=#008b8b, GradientType=1)",
        
