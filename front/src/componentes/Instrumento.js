@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Instrumento = (props) => {
 
@@ -45,14 +46,14 @@ const Instrumento = (props) => {
 
             {elementos.map((elemento) =>
                 <div style={styles.card}>
-                    <h1>{elemento.titulo}</h1>
-
+                    <h3>{elemento.titulo}</h3>
                     <h5>{elemento.texto}</h5>
                     <img src={elemento.img} height="200px" width="200px" alt="" />
                     <p>{elemento.precio}</p>
+                    <button ><Link to="/Detalle">Ver Producto</Link></button>
                 </div>)}
 
-
+ 
         </div>
     )
 }
