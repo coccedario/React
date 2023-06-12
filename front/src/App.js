@@ -17,6 +17,7 @@ import Vientos from "./paginas/Vientos";
 import Teclados from "./paginas/Teclados";
 import Nosotros from "./paginas/Nosotros";
 import Galeria from "./paginas/Galeria";
+import Compra from "./paginas/Compra"
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="Nosotros" element= {<Nosotros/>} />
           <Route path="Contacto" element= {<Contacto/>} />
           <Route path="Galeria/:id" element= {<Galeria/>} />
+          <Route path="Compra" element= {<Compra/>} />
 
 
         </Routes>

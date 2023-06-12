@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Instrumento = (props) => {
 
 
@@ -50,7 +51,7 @@ const Instrumento = (props) => {
                     <h5>{elemento.texto}</h5>
                     <img src={elemento.img} height="200px" width="200px" alt="" />
                     <p>{elemento.precio}</p>
-                    <button ><Link to="/Detalle">Ver Producto</Link></button>
+                    <button ><Link to="/Compra">Comprar</Link></button>
                 </div>)}
 
  
