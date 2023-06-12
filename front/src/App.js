@@ -1,5 +1,6 @@
 
-// import './App.css';
+//  import './App.css';
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ import Contacto from "./paginas/Contacto";
 import Vientos from "./paginas/Vientos";
 import Teclados from "./paginas/Teclados";
 import Nosotros from "./paginas/Nosotros";
+import Galeria from "./paginas/Galeria";
 
 
 
@@ -37,7 +39,7 @@ function App() {
           <Route path="Vientos" element= {<Vientos/>} />
           <Route path="Nosotros" element= {<Nosotros/>} />
           <Route path="Contacto" element= {<Contacto/>} />
-          
+          <Route path="Galeria/:id" element= {<Galeria/>} />
 
 
         </Routes>
