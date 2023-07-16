@@ -1,4 +1,4 @@
-const Contacto = (props) => {
+const Compra = (props) => {
 
     const styles={
         inicio: {
@@ -107,4 +107,4 @@ const Contacto = (props) => {
     )
 }
 
-export default Contacto;
+export default Compra;

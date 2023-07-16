@@ -51,7 +51,7 @@ const Instrumento = (props) => {
                     <h5>{elemento.texto}</h5>
                     <img src={elemento.img} height="200px" width="200px" alt="" />
                     <p>{elemento.precio}</p>
-                    <button ><Link to="/Compra">Comprar</Link></button>
+                    <button ><Link to="/Apirest">Comprar</Link></button>
                 </div>)}
 
  
