@@ -6,10 +6,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
 
+require('dotenv').config();
+var session = require('express-session');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var helloRouter = require('./routes/hello');
+var adminRouter = require ('./routes/admin/novedades');
 
 var app = express();
 
@@ -23,51 +27,35 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-  secret: 'keyboard cat',
+
+app.use( session ({
+
+  secret: 'MacriGattohsgdfhsd',
+  cookie: {maxAge: null},
   resave: false,
-  saveUninitialized: true,
-  // cookie: { secure: true }
+  saveUninitialized: true
+
 }))
 
-app.get('/', function (req,res){
-  var conocido = Boolean(req.session.nombre);
+secured = async (req, res, next) =>{
+try{
+console.log(req.session.id_usuario);
+if (req.session.id_usuario){
+  next();
+}else{
+  res.redirect('admin/login');
+}
+}catch (error) {
+console.log(error);
+}
 
-  res.render('index',{
-    title: 'Sesiones en Express JS',
-    conocido: conocido,
-    nombre: req.session.nombre
-  })
-});
-
-app.get('/dario', function (req,res){
-  
-
-  res.render('dario',{
-    title: 'Sesiones en Dario JS',
-    
-  })
-});
-
-
-app.post('/ingresar', function (req,res) {
-
-  if (req.body.nombre){
-    req.session.nombre = req.body.nombre
-  }
-  res.redirect('/');
-} )
-
-app.get('/salir', function (req,res){
-req.session.destroy();
-res.redirect('/');
-
-});
+}
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use('/hello', helloRouter);
+app.use('/admin/novedades',secured, adminRouter);
+//app.use('/hello', helloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
